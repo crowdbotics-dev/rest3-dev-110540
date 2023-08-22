@@ -12,6 +12,24 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return restdevAPI.post(`/api/v1/signup/`, payload)
 }
+function api_v1_swee_list(payload) {
+  return restdevAPI.get(`/api/v1/swee/`)
+}
+function api_v1_swee_create(payload) {
+  return restdevAPI.post(`/api/v1/swee/`, payload)
+}
+function api_v1_swee_retrieve(payload) {
+  return restdevAPI.get(`/api/v1/swee/${payload.id}/`)
+}
+function api_v1_swee_update(payload) {
+  return restdevAPI.put(`/api/v1/swee/${payload.id}/`, payload)
+}
+function api_v1_swee_partial_update(payload) {
+  return restdevAPI.patch(`/api/v1/swee/${payload.id}/`, payload)
+}
+function api_v1_swee_destroy(payload) {
+  return restdevAPI.delete(`/api/v1/swee/${payload.id}/`)
+}
 function modules_articles_article_list(payload) {
   return restdevAPI.get(`/modules/articles/article/`)
 }
@@ -119,6 +137,12 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_swee_list,
+  api_v1_swee_create,
+  api_v1_swee_retrieve,
+  api_v1_swee_update,
+  api_v1_swee_partial_update,
+  api_v1_swee_destroy,
   modules_articles_article_list,
   modules_articles_article_create,
   modules_articles_article_retrieve,
