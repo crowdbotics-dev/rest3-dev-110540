@@ -12,6 +12,76 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return restdevAPI.post(`/api/v1/signup/`, payload)
 }
+function modules_articles_article_list(payload) {
+  return restdevAPI.get(`/modules/articles/article/`)
+}
+function modules_articles_article_create(payload) {
+  return restdevAPI.post(`/modules/articles/article/`, payload)
+}
+function modules_articles_article_retrieve(payload) {
+  return restdevAPI.get(`/modules/articles/article/${payload.id}/`)
+}
+function modules_articles_article_update(payload) {
+  return restdevAPI.put(`/modules/articles/article/${payload.id}/`, payload)
+}
+function modules_articles_article_partial_update(payload) {
+  return restdevAPI.patch(`/modules/articles/article/${payload.id}/`, payload)
+}
+function modules_articles_article_destroy(payload) {
+  return restdevAPI.delete(`/modules/articles/article/${payload.id}/`)
+}
+function modules_two_factor_authentication_2fa_retrieve(payload) {
+  return restdevAPI.get(`/modules/two-factor-authentication/2fa`)
+}
+function modules_two_factor_authentication_2fa_create(payload) {
+  return restdevAPI.post(`/modules/two-factor-authentication/2fa`)
+}
+function modules_two_factor_authentication_twofactorauth_list(payload) {
+  return restdevAPI.get(`/modules/two-factor-authentication/twofactorauth/`)
+}
+function modules_two_factor_authentication_twofactorauth_create(payload) {
+  return restdevAPI.post(
+    `/modules/two-factor-authentication/twofactorauth/`,
+    payload
+  )
+}
+function modules_two_factor_authentication_twofactorauth_retrieve(payload) {
+  return restdevAPI.get(
+    `/modules/two-factor-authentication/twofactorauth/${payload.id}/`
+  )
+}
+function modules_two_factor_authentication_twofactorauth_update(payload) {
+  return restdevAPI.put(
+    `/modules/two-factor-authentication/twofactorauth/${payload.id}/`,
+    payload
+  )
+}
+function modules_two_factor_authentication_twofactorauth_partial_update(
+  payload
+) {
+  return restdevAPI.patch(
+    `/modules/two-factor-authentication/twofactorauth/${payload.id}/`,
+    payload
+  )
+}
+function modules_two_factor_authentication_twofactorauth_destroy(payload) {
+  return restdevAPI.delete(
+    `/modules/two-factor-authentication/twofactorauth/${payload.id}/`
+  )
+}
+function modules_two_factor_authentication_twofactorauth_send_otp_create(
+  payload
+) {
+  return restdevAPI.post(
+    `/modules/two-factor-authentication/twofactorauth/send_otp/`,
+    payload
+  )
+}
+function modules_two_factor_authentication_verify_destroy(payload) {
+  return restdevAPI.delete(
+    `/modules/two-factor-authentication/verify/${payload.id}/`
+  )
+}
 function rest_auth_login_create(payload) {
   return restdevAPI.post(`/rest-auth/login/`, payload)
 }
@@ -49,6 +119,22 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  modules_articles_article_list,
+  modules_articles_article_create,
+  modules_articles_article_retrieve,
+  modules_articles_article_update,
+  modules_articles_article_partial_update,
+  modules_articles_article_destroy,
+  modules_two_factor_authentication_2fa_retrieve,
+  modules_two_factor_authentication_2fa_create,
+  modules_two_factor_authentication_twofactorauth_list,
+  modules_two_factor_authentication_twofactorauth_create,
+  modules_two_factor_authentication_twofactorauth_retrieve,
+  modules_two_factor_authentication_twofactorauth_update,
+  modules_two_factor_authentication_twofactorauth_partial_update,
+  modules_two_factor_authentication_twofactorauth_destroy,
+  modules_two_factor_authentication_twofactorauth_send_otp_create,
+  modules_two_factor_authentication_verify_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
